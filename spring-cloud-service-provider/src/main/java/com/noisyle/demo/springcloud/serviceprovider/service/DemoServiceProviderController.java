@@ -18,7 +18,7 @@ public class DemoServiceProviderController {
 
 	private final Logger logger = LoggerFactory.getLogger(getClass());
 	
-	@Value("${welcome}")
+	@Value("${message.welcome}")
 	private String welcome;
 	
 	@Autowired
