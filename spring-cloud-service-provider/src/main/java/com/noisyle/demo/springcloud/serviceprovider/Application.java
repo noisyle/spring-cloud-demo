@@ -1,11 +1,9 @@
 package com.noisyle.demo.springcloud.serviceprovider;
 
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.client.SpringCloudApplication;
 
-@EnableDiscoveryClient
-@SpringBootApplication
+@SpringCloudApplication
 public class Application {
 	public static void main(String[] args) {
 		new SpringApplicationBuilder(Application.class).web(true).run(args);

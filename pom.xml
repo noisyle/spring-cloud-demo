@@ -15,6 +15,7 @@
 	<modules>
 		<module>spring-cloud-config</module>
 		<module>spring-cloud-eureka</module>
+		<module>spring-cloud-zuul</module>
 		<module>spring-cloud-service-provider</module>
 		<module>spring-cloud-service-consumer</module>
 	</modules>
