@@ -1,20 +1,25 @@
 @echo off
-rem å¯åŠ¨ä¸‰ä¸ªeurekaèŠ‚ç‚¹
+echo "Æô¶¯Èı¸öeureka½Úµã"
 start mvn -pl spring-cloud-eureka spring-boot:run -Dspring.profiles.active=peer1
 start mvn -pl spring-cloud-eureka spring-boot:run -Dspring.profiles.active=peer2
 start mvn -pl spring-cloud-eureka spring-boot:run -Dspring.profiles.active=peer3
+pause
 
-rem å¯åŠ¨configèŠ‚ç‚¹
+echo "Æô¶¯config½Úµã"
 start mvn -pl spring-cloud-config spring-boot:run -Dserver.port=18011
 start mvn -pl spring-cloud-config spring-boot:run -Dserver.port=18012
+pause
 
-rem å¯åŠ¨zuulèŠ‚ç‚¹
+echo "Æô¶¯zuul½Úµã"
 start mvn -pl spring-cloud-zuul spring-boot:run -Dserver.port=18021
+pause
 
-rem å¯åŠ¨æœåŠ¡æä¾›è€…èŠ‚ç‚¹
+echo "Æô¶¯·şÎñÌá¹©Õß½Úµã"
 start mvn -pl spring-cloud-service-provider spring-boot:run -Dserver.port=18031
 start mvn -pl spring-cloud-service-provider spring-boot:run -Dserver.port=18032
+pause
 
-rem å¯åŠ¨æœåŠ¡æ¶ˆè´¹è€…èŠ‚ç‚¹
+echo "Æô¶¯·şÎñÏû·ÑÕß½Úµã"
 start mvn -pl spring-cloud-service-consumer spring-boot:run -Dserver.port=18041
 start mvn -pl spring-cloud-service-consumer spring-boot:run -Dserver.port=18042
+pause
