@@ -26,8 +26,8 @@ public class DemoServiceProviderController {
 
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String hello(@RequestParam String name) {
-		ServiceInstance instance = client.getLocalServiceInstance();
-		logger.info("DemoServiceProviderController /hello, host:{}, service_id:{}, param:{}", instance.getHost(), instance.getServiceId(), name);
+//		ServiceInstance instance = client.getLocalServiceInstance();
+//		logger.info("DemoServiceProviderController /hello, host:{}, service_id:{}, param:{}", instance.getHost(), instance.getServiceId(), name);
 		return String.format(welcome, name);
 	}
 }

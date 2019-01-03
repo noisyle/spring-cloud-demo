@@ -15,7 +15,7 @@ public class DemoServiceConsumerService {
 
 	@HystrixCommand(fallbackMethod = "helloServiceFallback")
 	public String hello(@RequestParam String name) {
-		return restTemplate.getForEntity("http://DEMO-SERVICE-PROVIDER/hello?name={name}", String.class, name).getBody();
+		return restTemplate.getForObject("http://DEMO-SERVICE-PROVIDER/hello?name={name}", String.class, name);
 	}
 
 	public String helloServiceFallback(String name) {
