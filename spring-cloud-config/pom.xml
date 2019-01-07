@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>com.noisyle.demo</groupId>
-		<artifactId>spring-cloud-demo-parent</artifactId>
+		<artifactId>spring-cloud-scaffold</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 	<artifactId>spring-cloud-config</artifactId>
