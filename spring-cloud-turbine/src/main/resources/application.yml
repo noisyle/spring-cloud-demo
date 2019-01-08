@@ -1,0 +1,29 @@
+server:
+  port: 18051
+
+spring:
+  application:
+    name: turbine-server
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://peer1:18001/eureka/,http://peer2:18002/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+      cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
+
+turbine:
+  app-config: demo-service-consumer
+  aggregator:
+    clusterConfig: default
+  clusterNameExpression: new String("default")
+  combine-host: true
+  instanceUrlSuffix:
+    default: actuator/hystrix.stream

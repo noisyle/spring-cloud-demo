@@ -24,6 +24,6 @@ public class DemoServiceProviderController {
 	@RequestMapping(value = "/hello", method = RequestMethod.GET)
 	public String hello(@RequestParam String name) {
         logger.info("DemoServiceProviderController /hello, param: {}", name);
-		return String.format(welcome, name) + String.format("(port: %s)", port);
+		return String.format(welcome, name) + String.format(" (port:%s)", port);
 	}
 }

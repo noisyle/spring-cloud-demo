@@ -18,6 +18,7 @@
     <module>spring-cloud-zuul</module>
     <module>spring-cloud-service-provider</module>
     <module>spring-cloud-service-consumer</module>
+    <module>spring-cloud-turbine</module>
   </modules>
 
   <dependencyManagement>

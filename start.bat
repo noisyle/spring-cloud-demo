@@ -6,7 +6,7 @@ pause
 
 echo "启动config"
 start mvn -pl spring-cloud-config spring-boot:run -Dserver.port=18011
-start mvn -pl spring-cloud-config spring-boot:run -Dserver.port=18012
+rem start mvn -pl spring-cloud-config spring-boot:run -Dserver.port=18012
 pause
  
 echo "启动zuul"
@@ -15,10 +15,14 @@ pause
 
 echo "启动服务提供者"
 start mvn -pl spring-cloud-service-provider spring-boot:run -Dserver.port=18031
-start mvn -pl spring-cloud-service-provider spring-boot:run -Dserver.port=18032
+rem start mvn -pl spring-cloud-service-provider spring-boot:run -Dserver.port=18032
 pause
 
 echo "启动服务消费者"
 start mvn -pl spring-cloud-service-consumer spring-boot:run -Dserver.port=18041
-start mvn -pl spring-cloud-service-consumer spring-boot:run -Dserver.port=18042
+rem start mvn -pl spring-cloud-service-consumer spring-boot:run -Dserver.port=18042
+pause
+
+echo "启动turbine"
+start mvn -pl spring-cloud-turbine spring-boot:run -Dserver.port=18051
 pause
