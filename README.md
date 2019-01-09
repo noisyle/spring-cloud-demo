@@ -30,7 +30,6 @@ mvn spring-boot:run -Dserver.port=18032
 mvn spring-boot:run -Dserver.port=18041
 mvn spring-boot:run -Dserver.port=18042
 ```
-
 ## 启动turbine
 ``` console
 mvn spring-boot:run -Dserver.port=18051
