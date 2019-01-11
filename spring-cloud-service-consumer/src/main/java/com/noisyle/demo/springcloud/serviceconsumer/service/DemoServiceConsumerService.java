@@ -13,12 +13,12 @@ public class DemoServiceConsumerService {
 	@Autowired
 	RestTemplate restTemplate;
 
-	@HystrixCommand(fallbackMethod = "helloServiceFallback")
-	public String hello(@RequestParam String name) {
-		return restTemplate.getForObject("http://DEMO-SERVICE-PROVIDER/hello?name={name}", String.class, name);
+	@HystrixCommand(fallbackMethod = "greetingServiceFallback")
+	public String greeting(@RequestParam String name) {
+		return restTemplate.getForObject("http://DEMO-SERVICE-PROVIDER/greeting?name={name}", String.class, name);
 	}
 
-	public String helloServiceFallback(String name) {
+	public String greetingServiceFallback(String name) {
 		return "Error! param: " + name;
 	}
 }

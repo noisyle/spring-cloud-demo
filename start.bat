@@ -26,3 +26,7 @@ pause
 echo "Æô¶¯turbine"
 start mvn -pl spring-cloud-turbine spring-boot:run -Dserver.port=18051
 pause
+
+echo "Æô¶¯spring-boot-admin"
+start mvn -pl spring-boot-admin spring-boot:run -Dserver.port=18061
+pause

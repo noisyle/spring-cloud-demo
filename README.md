@@ -35,3 +35,7 @@ mvn spring-boot:run -Dserver.port=18042
 mvn spring-boot:run -Dserver.port=18051
 http://localhost:18051/hystrix/monitor?stream=http://localhost:18051/turbine.stream&delay=2000&title=demo
 ```
+## 启动spring-boot-admin
+``` console
+mvn spring-boot:run -Dserver.port=18061
+```

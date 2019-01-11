@@ -18,9 +18,9 @@ public class DemoServiceConsumerController {
 	@Autowired
 	DemoServiceConsumerService demoServiceConsumerService;
 	
-    @RequestMapping(value = "/hello", method = RequestMethod.GET)
-    public String hello(@RequestParam String name) {
-    	logger.info("DemoServiceConsumerController /hello, param: {}", name);
-        return demoServiceConsumerService.hello(name);
+    @RequestMapping(value = "/greeting", method = RequestMethod.GET)
+    public String greeting(@RequestParam String name) {
+    	logger.info("DemoServiceConsumerController /greeting, param: {}", name);
+        return demoServiceConsumerService.greeting(name);
     }
 }
