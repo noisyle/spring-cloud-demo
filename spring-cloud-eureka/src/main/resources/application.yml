@@ -1,3 +1,16 @@
 spring:
   application:
     name: eureka-server
+
+management:
+  endpoints:
+    health:
+      show-details: ALWAYS
+  web:
+    exposure:
+      include: "*"
+    cors:
+      allowed-origins: "*"
+      allowed-methods: "*"
+  security:
+    enabled: false

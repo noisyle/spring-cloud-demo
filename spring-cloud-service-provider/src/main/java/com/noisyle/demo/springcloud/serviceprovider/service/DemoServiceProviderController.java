@@ -18,12 +18,12 @@ public class DemoServiceProviderController {
 	@Value("${server.port}")
 	private String port;
 	
-	@Value("${message.welcome}")
-	private String welcome;
+	@Value("${message.greeting}")
+	private String greeting;
 	
 	@RequestMapping(value = "/greeting", method = RequestMethod.GET)
 	public String greeting(@RequestParam String name) {
         logger.info("DemoServiceProviderController /greeting, param: {}", name);
-		return String.format(welcome, name) + String.format(" (port:%s)", port);
+		return String.format(greeting, name) + String.format(" (from port:%s)", port);
 	}
 }
