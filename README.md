@@ -1,6 +1,7 @@
 
 # 参考资料:
 - [Spring-Cloud基础教程](http://blog.didispace.com/Spring-Cloud基础教程/)
+- [Spring Boot Admin Reference Guide](https://codecentric.github.io/spring-boot-admin/2.0.4/)
 # 启动方法
 ## 修改hosts文件，添加如下记录
 ``` console
